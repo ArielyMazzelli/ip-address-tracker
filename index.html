@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/tab-location-icon.png">
+
+  <title>IP Address Tracker</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="header-title">IP Address Tracker</h1>
+      </div>
+      <div id="ip-search">
+        <input class="search-input" type="search" name="ip" placeholder="Search for any IP address or domain" required>
+        <button type="submit" class="search-button"> <img src="images/icon-arrow.svg" alt=""></button>
+      </div>
+      <p id="message"></p>
+    </div>
+  </header>
+
+
+  <main class="main">
+    <div class="ip-address">
+      <div class="ip-address-info">
+        <div class="ip-info">
+          <h2 class="ip-address-title">IP Address</h2>
+          <p class="ip-address-paragraph" id="ipAddress">188.12.165.0</p>
+        </div>
+        <div class="ip-info">
+          <h2 class="ip-address-title"> Location</h2>
+          <p class="ip-address-paragraph" id="location">Volterra, Italy</p>
+        </div>
+        <div class="ip-info">
+          <h2 class="ip-address-title">Timezone</h2>
+          <p class="ip-address-paragraph" id="timeZone">Europe/Rome <span id="timeZoneSpan"></span></p>
+        </div>
+        <div class="ip-info">
+          <h2 class="ip-address-title">ISP</h2>
+          <p class="ip-address-paragraph" id="isp">Telecom Italia S.p.A.IPTV Platform</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="map">
+    </div>
+  </main>
+
+  <div>
+    <footer class="footer">
+      <p>&copy; Copyright 2024 Mazzelli. All rights reserved.</p>
+    </footer>
+  </div>
+
+
+  <script src="js/map.js"></script>
+</body>
+
+</html>
